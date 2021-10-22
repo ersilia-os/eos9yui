@@ -39,14 +39,14 @@ if args.model == "aux":
    model = MLP(settings["aux_model"]["layers"],1 ,settings["aux_model"]["dropout"])
    model.load_state_dict(torch.load(model_paths +"aux_cv0.pt", map_location=torch.device('cpu')))
    model.eval()
-elif args.model == "base":
-    model = MLP(settings["baseline_model"]["layers"],1 ,settings["baseline_model"]["dropout"])
-    model.load_state_dict(torch.load(model_paths +"baseline_cv0.pt", map_location=torch.device('cpu')))
-    model.eval()
-elif args.model == "ae":
-    model = FP_AE(settings["ae_model"]["layers"],1+settings["ae_model"]["with_npl"],settings["ae_model"]["dropout"])
-    model.load_state_dict(torch.load(model_paths +"ae_cv0.pt", map_location=torch.device('cpu')))
-    model.eval()
+# elif args.model == "base":
+#     model = MLP(settings["baseline_model"]["layers"],1 ,settings["baseline_model"]["dropout"])
+#     model.load_state_dict(torch.load(model_paths +"baseline_cv0.pt", map_location=torch.device('cpu')))
+#     model.eval()
+# elif args.model == "ae":
+#     model = FP_AE(settings["ae_model"]["layers"],1+settings["ae_model"]["with_npl"],settings["ae_model"]["dropout"])
+#     model.load_state_dict(torch.load(model_paths +"ae_cv0.pt", map_location=torch.device('cpu')))
+#     model.eval()
 
 print("\nStart calculating the NPFP from ECFP4:")
 _, npl, nnfp = model(torch.tensor(ecfp4.values, dtype= torch.float))
