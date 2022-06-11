@@ -1,11 +1,13 @@
-# Natural product likeness score and fingerprints
+# Natural product likeness 
+
+Natural product likeness score and fingerprint
 
 | Description | Input  | Output  | Training Data | Experimental Validation |
 | ------- | --- | --- | --- | --- |
-| Generation of likeness score and fingerprints for natural products | SMILES | Vectors | 605351 compounds | No |
+| Generation of likeness score and fingerprints for natural products | SMILES | Vectors | 605,351 compounds | No |
 
 ## Source code
-This model is publshed by Janosch Menkea, Joana Massaa & Oliver Koch, Natural product scores and fingerprints extracted from artificial neural networks Received 31 March 2021, Revised 26 July 2021, Accepted 26 July 2021, Available online 30 July 2021, Version of Record 13 September 2021. https://doi.org/10.1016/j.csbj.2021.07.032
+This model is publshed by Janosch Menke, Joana Massa, Oliver Koch. Natural product scores and fingerprints extracted from artificial neural networks. *Computational and Structural Biotechnology Journal*, Volume 19, 2021, Pages 4593-4602, ISSN 2001-0370, DOI: [https://doi.org/10.1016/j.csbj.2021.07.032](https://www.sciencedirect.com/science/article/pii/S2001037021003226)
 
 Code: https://github.com/kochgroup/neural_npfp
 
