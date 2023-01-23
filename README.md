@@ -1,26 +1,40 @@
-# Natural product likeness score 
+# Natural product likeness score
 
-## Model Identifiers
-- Slug: natural-product-likeness 
-- Ersilia ID: eos9yui
-- Tags: fingerprint,	drug-likeness,	NP
+The model is a derivation of the natural product fingerprint (eos6tg8). In addition to generating specific natural product fingerprints, the activation value of the neuron that predicts if a molecule is a natural product or not can be used as a NP-likeness score. The method outperforms the NP\_Score implemented in RDKit.
 
-## Model Description 
-A structural fingerprint inferred using neural networks and used to improve natural product representation 
-- Input: SMILES 
-- Output: Vectors
-- Model type: Regression
-- Mode of training: Pretrained
-- Training data: 605,351 compounds (https://github.com/kochgroup/neural_npfp)
-- Experimentally validatedd: No 
+## Identifiers
 
-## Source code
-This model is published by Janosch Menke, Joana Massa, Oliver Koch. Natural product scores and fingerprints extracted from artificial neural networks. *Computational and Structural Biotechnology Journal*, Volume 19, 2021, Pages 4593-4602, ISSN 2001-0370, DOI: [https://doi.org/10.1016/j.csbj.2021.07.032](https://www.sciencedirect.com/science/article/pii/S2001037021003226)
-- Code: https://github.com/kochgroup/neural_npfp
-- Checkpoints: https://github.com/kochgroup/neural_npfp/blob/main/neural_npfp/model.py
+* EOS model ID: `eos9yui`
+* Slug: `natural-product-likeness`
+
+## Characteristics
+
+* Input: `Compound`
+* Input Shape: `Single`
+* Task: `Regression`
+* Output: `Score`
+* Output Type: `Float`
+* Output Shape: `Single`
+* Interpretation: Higher score indicates higher natural product likeness
+
+## References
+
+* [Publication](https://www.sciencedirect.com/science/article/pii/S2001037021003226?)
+* [Source Code](https://github.com/kochgroup/neural_npfp)
+* Ersilia contributor: [miquelduranfrigola](https://github.com/miquelduranfrigola)
+
+## Citation
+
+If you use this model, please cite the [original authors](https://www.sciencedirect.com/science/article/pii/S2001037021003226?) of the model and the [Ersilia Model Hub](https://github.com/ersilia-os/ersilia/blob/master/CITATION.cff).
 
 ## License
-The GPL-v3 license applies to all parts of this repository and is located at the main folder
 
-## History
-- Model was downloaded on September 28, 2021
+This package is licensed under a GPL-3.0 license. The model contained within this package is licensed under a None license.
+
+Notice: Ersilia grants access to these models 'as is' provided by the original authors, please refer to the original code repository and/or publication if you use the model in your research.
+
+## About Us
+
+The [Ersilia Open Source Initiative](https://ersilia.io) is a Non Profit Organization ([1192266](https://register-of-charities.charitycommission.gov.uk/charity-search/-/charity-details/5170657/full-print)) with the mission is to equip labs, universities and clinics in LMIC with AI/ML tools for infectious disease research.
+
+[Help us](https://www.ersilia.io/donate) achieve our mission!
