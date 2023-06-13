@@ -1,0 +1,1 @@
+python $1/neural_npfp/neural_npfp/get_fp.py $2 $3 -s smiles
