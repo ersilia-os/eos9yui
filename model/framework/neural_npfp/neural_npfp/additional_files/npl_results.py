@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 import torch
 from model import *
-import seaborn as sns
+# import seaborn as sns
 from matplotlib import pyplot as plt
 from validation_updated import *
 from prettytable import PrettyTable
@@ -125,10 +125,10 @@ coconut_npl=coconut_npl.loc[remove_val_mol,:]
 coconut_npl.reset_index(inplace =True, drop=True)
 np.sum(coconut_npl.is_np==1)
 
-sns.kdeplot(zinc_npl, shade=True)
-sns.kdeplot(coconut_npl.npl[coconut_npl.is_np==0],shade=True, clip = (-10,0))
-sns.kdeplot(coconut_npl.npl[coconut_npl.is_np==1],shade=True)
-sns.despine()
-plt.legend(labels=['ZINC - InStock', 'Decoys Included', 'Coconut'],frameon=False)
-plt.xlabel("Natural Product Likeness")
-plt.savefig("../results/plots/density_npl.pdf",format="pdf", dpi =300, bbox_inches='tight')
+# sns.kdeplot(zinc_npl, shade=True)
+# sns.kdeplot(coconut_npl.npl[coconut_npl.is_np==0],shade=True, clip = (-10,0))
+# sns.kdeplot(coconut_npl.npl[coconut_npl.is_np==1],shade=True)
+# sns.despine()
+# plt.legend(labels=['ZINC - InStock', 'Decoys Included', 'Coconut'],frameon=False)
+# plt.xlabel("Natural Product Likeness")
+# plt.savefig("../results/plots/density_npl.pdf",format="pdf", dpi =300, bbox_inches='tight')

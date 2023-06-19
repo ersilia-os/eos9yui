@@ -13,7 +13,7 @@ from scipy.spatial.distance import pdist, jaccard
 from scipy.special import expit
 import torch
 import os
-import seaborn as sns
+# import seaborn as sns
 
 
 def task1_validation(best_model):

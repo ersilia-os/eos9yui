@@ -3,7 +3,7 @@ import pandas as pd
 import numpy as np
 import os
 import time
-import seaborn as sns
+# import seaborn as sns
 from rdkit import Chem
 from utils import *
 #%%% LOAD DATA
@@ -84,11 +84,11 @@ np.sum(coconut_data.iloc[results_dynamic[results_dynamic.mean_sim.notna()].index
 np.sum(coconut_data.iloc[results_static[results_static.mean_sim.notna()].index,1]>1)
 
 
-# Plot distribution of NPL scores
-import seaborn as sns
-sns.kdeplot(coconut_data.iloc[results_dynamic[results_dynamic.mean_sim.notna()].index,1])
-sns.kdeplot(coconut_data.iloc[results_static[results_static.mean_sim.notna()].index,1])
-sns.kdeplot(coconut_data.npl)
+# # Plot distribution of NPL scores
+# import seaborn as sns
+# sns.kdeplot(coconut_data.iloc[results_dynamic[results_dynamic.mean_sim.notna()].index,1])
+# sns.kdeplot(coconut_data.iloc[results_static[results_static.mean_sim.notna()].index,1])
+# sns.kdeplot(coconut_data.npl)
 
 
 #%%
