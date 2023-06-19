@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 import torch
 from model import *
-import seaborn as sns
+# import seaborn as sns
 from matplotlib import pyplot as plt
 from validation_updated import *
 from prettytable import PrettyTable
@@ -512,51 +512,51 @@ nnfp_sim_cos_untrained= [cosine_similarity(nnfp_data_untrained[0].reshape(1,-1),
 activities =np.array(aux_data.active)
 nps =np.array(aux_data.np)
 #%% Correlation Analysis
-fig, ax =plt.subplots(2,2, figsize=(10,5), sharex= "col")
+# fig, ax =plt.subplots(2,2, figsize=(10,5), sharex= "col")
 
 
-ax[0][0].plot(np.array(nnfp_sim_cos_untrained[1:])[np.where(nps[1:]==0)[0].tolist()], np.array(ecfp_sim[1:])[np.where(nps[1:]==0)[0].tolist()],"o",color =sns.color_palette("pastel")[7], markersize =4)
-ax[0][0].plot(np.array(nnfp_sim_cos_untrained[1:])[np.where((nps[1:]==1)& (activities[1:]==0))[0].tolist()], np.array(ecfp_sim[1:])[np.where((nps[1:]==1)& (activities[1:]==0))[0].tolist()],"o", mfc='none', color = sns.color_palette()[1] , markersize= 4)
-ax[0][0].plot(np.array(nnfp_sim_cos_untrained[1:])[np.where((nps[1:]==1)& (activities[1:]==1))[0].tolist()], np.array(ecfp_sim[1:])[np.where((nps[1:]==1)& (activities[1:]==1))[0].tolist()],"o", color = sns.color_palette()[2] , markersize= 4)
-ax[0][0].set_xlabel("Similarity of NP_AUX Fingerprint")
-ax[0][0].xaxis.set_tick_params(which='both', labelbottom=True)
-ax[0][1].xaxis.set_tick_params(which='both', labelbottom=True)
+# ax[0][0].plot(np.array(nnfp_sim_cos_untrained[1:])[np.where(nps[1:]==0)[0].tolist()], np.array(ecfp_sim[1:])[np.where(nps[1:]==0)[0].tolist()],"o",color =sns.color_palette("pastel")[7], markersize =4)
+# ax[0][0].plot(np.array(nnfp_sim_cos_untrained[1:])[np.where((nps[1:]==1)& (activities[1:]==0))[0].tolist()], np.array(ecfp_sim[1:])[np.where((nps[1:]==1)& (activities[1:]==0))[0].tolist()],"o", mfc='none', color = sns.color_palette()[1] , markersize= 4)
+# ax[0][0].plot(np.array(nnfp_sim_cos_untrained[1:])[np.where((nps[1:]==1)& (activities[1:]==1))[0].tolist()], np.array(ecfp_sim[1:])[np.where((nps[1:]==1)& (activities[1:]==1))[0].tolist()],"o", color = sns.color_palette()[2] , markersize= 4)
+# ax[0][0].set_xlabel("Similarity of NP_AUX Fingerprint")
+# ax[0][0].xaxis.set_tick_params(which='both', labelbottom=True)
+# ax[0][1].xaxis.set_tick_params(which='both', labelbottom=True)
 
-ax[0][1].plot(np.array(nnfp_sim_cos_desc[1:])[np.where(nps[1:]==0)[0].tolist()], np.array(ecfp_sim[1:])[np.where(nps[1:]==0)[0].tolist()],"o",color =sns.color_palette("pastel")[7], markersize =4)
-ax[0][1].plot(np.array(nnfp_sim_cos_desc[1:])[np.where((nps[1:]==1)& (activities[1:]==0))[0].tolist()], np.array(ecfp_sim[1:])[np.where((nps[1:]==1)& (activities[1:]==0))[0].tolist()],"o",  mfc='none',color = sns.color_palette()[1] , markersize= 4)
-ax[0][1].plot(np.array(nnfp_sim_cos_desc[1:])[np.where((nps[1:]==1)& (activities[1:]==1))[0].tolist()], np.array(ecfp_sim[1:])[np.where((nps[1:]==1)& (activities[1:]==1))[0].tolist()],"o", color = sns.color_palette()[2] , markersize= 4)
-ax[1][1].set_xlabel("Similarity of NP_AUX Fingerprint")
+# ax[0][1].plot(np.array(nnfp_sim_cos_desc[1:])[np.where(nps[1:]==0)[0].tolist()], np.array(ecfp_sim[1:])[np.where(nps[1:]==0)[0].tolist()],"o",color =sns.color_palette("pastel")[7], markersize =4)
+# ax[0][1].plot(np.array(nnfp_sim_cos_desc[1:])[np.where((nps[1:]==1)& (activities[1:]==0))[0].tolist()], np.array(ecfp_sim[1:])[np.where((nps[1:]==1)& (activities[1:]==0))[0].tolist()],"o",  mfc='none',color = sns.color_palette()[1] , markersize= 4)
+# ax[0][1].plot(np.array(nnfp_sim_cos_desc[1:])[np.where((nps[1:]==1)& (activities[1:]==1))[0].tolist()], np.array(ecfp_sim[1:])[np.where((nps[1:]==1)& (activities[1:]==1))[0].tolist()],"o", color = sns.color_palette()[2] , markersize= 4)
+# ax[1][1].set_xlabel("Similarity of NP_AUX Fingerprint")
 
-ax[1][0].plot(np.array(nnfp_sim_cos_untrained[1:])[np.where(nps[1:]==0)[0].tolist()], np.array(ecfp_sim[1:])[np.where(nps[1:]==0)[0].tolist()],"o",color =sns.color_palette("pastel")[7], markersize =4)
-ax[1][0].plot(np.array(nnfp_sim_cos_untrained[1:])[np.where((nps[1:]==1)& (activities[1:]==0))[0].tolist()], np.array(ecfp_sim[1:])[np.where((nps[1:]==1)& (activities[1:]==0))[0].tolist()],"o", mfc='none',color = sns.color_palette()[1] , markersize= 4)
-ax[1][0].plot(np.array(nnfp_sim_cos_untrained[1:])[np.where((nps[1:]==1)& (activities[1:]==1))[0].tolist()], np.array(ecfp_sim[1:])[np.where((nps[1:]==1)& (activities[1:]==1))[0].tolist()],"o", color = sns.color_palette()[2] , markersize= 4)
+# ax[1][0].plot(np.array(nnfp_sim_cos_untrained[1:])[np.where(nps[1:]==0)[0].tolist()], np.array(ecfp_sim[1:])[np.where(nps[1:]==0)[0].tolist()],"o",color =sns.color_palette("pastel")[7], markersize =4)
+# ax[1][0].plot(np.array(nnfp_sim_cos_untrained[1:])[np.where((nps[1:]==1)& (activities[1:]==0))[0].tolist()], np.array(ecfp_sim[1:])[np.where((nps[1:]==1)& (activities[1:]==0))[0].tolist()],"o", mfc='none',color = sns.color_palette()[1] , markersize= 4)
+# ax[1][0].plot(np.array(nnfp_sim_cos_untrained[1:])[np.where((nps[1:]==1)& (activities[1:]==1))[0].tolist()], np.array(ecfp_sim[1:])[np.where((nps[1:]==1)& (activities[1:]==1))[0].tolist()],"o", color = sns.color_palette()[2] , markersize= 4)
 
-ax[1][1].plot(np.array(nnfp_sim_cos_base[1:])[np.where(nps[1:]==0)[0].tolist()], np.array(ecfp_sim[1:])[np.where(nps[1:]==0)[0].tolist()],"o",color =sns.color_palette("pastel")[7], markersize =4)
-ax[1][1].plot(np.array(nnfp_sim_cos_base[1:])[np.where((nps[1:]==1)& (activities[1:]==0))[0].tolist()], np.array(ecfp_sim[1:])[np.where((nps[1:]==1)& (activities[1:]==0))[0].tolist()],"o", mfc='none', color = sns.color_palette()[1] , markersize= 4)
-ax[1][1].plot(np.array(nnfp_sim_cos_base[1:])[np.where((nps[1:]==1)& (activities[1:]==1))[0].tolist()], np.array(ecfp_sim[1:])[np.where((nps[1:]==1)& (activities[1:]==1))[0].tolist()],"o",color = sns.color_palette()[2] , markersize= 4)
-
-
+# ax[1][1].plot(np.array(nnfp_sim_cos_base[1:])[np.where(nps[1:]==0)[0].tolist()], np.array(ecfp_sim[1:])[np.where(nps[1:]==0)[0].tolist()],"o",color =sns.color_palette("pastel")[7], markersize =4)
+# ax[1][1].plot(np.array(nnfp_sim_cos_base[1:])[np.where((nps[1:]==1)& (activities[1:]==0))[0].tolist()], np.array(ecfp_sim[1:])[np.where((nps[1:]==1)& (activities[1:]==0))[0].tolist()],"o", mfc='none', color = sns.color_palette()[1] , markersize= 4)
+# ax[1][1].plot(np.array(nnfp_sim_cos_base[1:])[np.where((nps[1:]==1)& (activities[1:]==1))[0].tolist()], np.array(ecfp_sim[1:])[np.where((nps[1:]==1)& (activities[1:]==1))[0].tolist()],"o",color = sns.color_palette()[2] , markersize= 4)
 
 
-ax[0][0].set_ylabel("ECFP Similarity")
-ax[0][1].set_xlabel("Similarity of NP_AUX Fingerprint")
-#ax[1].set_ylabel("Similarity of ECFP")
-ax[1][0].set_xlabel("Similarity of Baseline Fingerprint")
-ax[1][1].set_xlabel("Similarity of Baseline Fingerprint")
-
-ax[1][0].set_ylabel("ECFP Similarity")
-
-ax[1][1].set_ylabel("ECFP Similarity")
-
-ax[0][1].set_ylabel("ECFP Similarity")
-plt.tight_layout()
-
-ax[0][0].set_title("Before Training")
-ax[0][1].set_title("After Training")
 
 
-plt.legend(labels=['Synthetic', "Inactive NP", "Active NP"],frameon=False, bbox_to_anchor=(-0.1, -0.48), fancybox=True,ncol=4,loc='lower center', prop={'size': 12})
-plt.savefig("../results/plots/correlation_trainedVSuntrained.pdf",format="pdf", dpi =300, bbox_inches='tight')
+# ax[0][0].set_ylabel("ECFP Similarity")
+# ax[0][1].set_xlabel("Similarity of NP_AUX Fingerprint")
+# #ax[1].set_ylabel("Similarity of ECFP")
+# ax[1][0].set_xlabel("Similarity of Baseline Fingerprint")
+# ax[1][1].set_xlabel("Similarity of Baseline Fingerprint")
+
+# ax[1][0].set_ylabel("ECFP Similarity")
+
+# ax[1][1].set_ylabel("ECFP Similarity")
+
+# ax[0][1].set_ylabel("ECFP Similarity")
+# plt.tight_layout()
+
+# ax[0][0].set_title("Before Training")
+# ax[0][1].set_title("After Training")
+
+
+# plt.legend(labels=['Synthetic', "Inactive NP", "Active NP"],frameon=False, bbox_to_anchor=(-0.1, -0.48), fancybox=True,ncol=4,loc='lower center', prop={'size': 12})
+# plt.savefig("../results/plots/correlation_trainedVSuntrained.pdf",format="pdf", dpi =300, bbox_inches='tight')
 
 
 
@@ -576,15 +576,15 @@ model_desc.eval()
 
 nnfp_model_desc = (model_desc(torch.tensor(fps_data.values, dtype =torch.float).cuda())[1].cpu().detach().flatten().numpy())
 #nnfp_model_desc = abs(nnfp_model_desc)-x_bar
-#sns.kdeplot(nnfp_model_desc)
-plt.legend(["NN Score", "Ertl Score"])
+# #sns.kdeplot(nnfp_model_desc)
+# plt.legend(["NN Score", "Ertl Score"])
 
-sns.scatterplot(x=aux_data.npl[aux_data.np ==0], y=nnfp_model_desc[aux_data.np ==0]  )
-sns.scatterplot(x= aux_data.npl[aux_data.np ==1], y=nnfp_model_desc[aux_data.np ==1]  )
-plt.xlabel("Ertl Score")
-plt.ylabel("NN Score")
-plt.legend(["Synthetic", "NP"])
-plt.savefig("../results/plots/ror_gamma_np_ertelvsours.svg",format="svg", bbox_inches='tight')
+# sns.scatterplot(x=aux_data.npl[aux_data.np ==0], y=nnfp_model_desc[aux_data.np ==0]  )
+# sns.scatterplot(x= aux_data.npl[aux_data.np ==1], y=nnfp_model_desc[aux_data.np ==1]  )
+# plt.xlabel("Ertl Score")
+# plt.ylabel("NN Score")
+# plt.legend(["Synthetic", "NP"])
+# plt.savefig("../results/plots/ror_gamma_np_ertelvsours.svg",format="svg", bbox_inches='tight')
 
 #Compute Correlation
 
