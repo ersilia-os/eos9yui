@@ -31,7 +31,7 @@ except:
 
 model_paths = os.path.dirname(os.path.realpath(__file__))+"/../data/trained_models/npl_nonorm_64/"
 settings = yaml.safe_load(open(model_paths+"settings.yml", "r"))
-print("\nStart calculating the ECFP4 from SMILES:")
+# print("\nStart calculating the ECFP4 from SMILES:")
 ecfp4,index_error=get_fingerprints_user(data, label= args.smiles)
 
 
@@ -48,7 +48,7 @@ if args.model == "aux":
 #     model.load_state_dict(torch.load(model_paths +"ae_cv0.pt", map_location=torch.device('cpu')))
 #     model.eval()
 
-print("\nStart calculating the NPFP from ECFP4:")
+# print("\nStart calculating the NPFP from ECFP4:")
 _, npl, nnfp = model(torch.tensor(ecfp4.values, dtype= torch.float))
 nnfp = nnfp.detach().clone().numpy()
 nnfp[index_error,:] = np.nan
