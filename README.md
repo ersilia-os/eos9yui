@@ -23,6 +23,11 @@ The model is a derivation of the natural product fingerprint (eos6tg8). In addit
 * [Source Code](https://github.com/kochgroup/neural_npfp)
 * Ersilia contributor: [miquelduranfrigola](https://github.com/miquelduranfrigola)
 
+## Ersilia model URLs
+* [GitHub](https://github.com/ersilia-os/eos9yui)
+* [AWS S3](https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos9yui.zip)
+* [DockerHub](https://hub.docker.com/r/ersiliaos/eos9yui) (AMD64, ARM64)
+
 ## Citation
 
 If you use this model, please cite the [original authors](https://www.sciencedirect.com/science/article/pii/S2001037021003226?) of the model and the [Ersilia Model Hub](https://github.com/ersilia-os/ersilia/blob/master/CITATION.cff).

@@ -27,5 +27,11 @@
     "Publication": "https://www.sciencedirect.com/science/article/pii/S2001037021003226?",
     "Source Code": "https://github.com/kochgroup/neural_npfp",
     "License": "None",
-    "Contributor": "miquelduranfrigola"
+    "Contributor": "miquelduranfrigola",
+    "S3": "https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos9yui.zip",
+    "DockerHub": "https://hub.docker.com/r/ersiliaos/eos9yui",
+    "Docker Architecture": [
+        "AMD64",
+        "ARM64"
+    ]
 }
