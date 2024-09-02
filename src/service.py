@@ -75,9 +75,9 @@ class Model(object):
             R = []
             for r in reader:
                 R += [{"score": Float(r[1])}] 
+        result = {'result': R, 'meta': {"score": h}}
         shutil.rmtree(tmp_folder)
-        return R
-
+        return result
 
 class Artifact(BentoServiceArtifact):
     def __init__(self, name):
