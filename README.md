@@ -26,7 +26,7 @@ The model is a derivation of the natural product fingerprint (eos6tg8). In addit
 ## Ersilia model URLs
 * [GitHub](https://github.com/ersilia-os/eos9yui)
 * [AWS S3](https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos9yui.zip)
-* [DockerHub](https://hub.docker.com/r/ersiliaos/eos9yui) (AMD64)
+* [DockerHub](https://hub.docker.com/r/ersiliaos/eos9yui) (AMD64, ARM64)
 
 ## Citation
 

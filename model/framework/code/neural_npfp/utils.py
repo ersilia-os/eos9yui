@@ -18,7 +18,7 @@ from rdkit import RDLogger
 def get_fingerprints_user(data, label ,bitSize_circular=2048, morgan_radius=2):
     
     index_not_convertable = []
-    
+    print(label)
     """ 
     Computes the Fingerprints from Molecules
     """
@@ -29,8 +29,8 @@ def get_fingerprints_user(data, label ,bitSize_circular=2048, morgan_radius=2):
     
     feature_matrix= pd.DataFrame(np.zeros((data.shape[0],bitSize_circular)), dtype=int) 
     
-    
     for i in tqdm(range(data.shape[0])):
+       print(data.iloc[i,label])
        try:
            feature_matrix.iloc[i,:] = np.array(AllChem.GetMorganFingerprintAsBitVect(Chem.MolFromSmiles(data.iloc[i, label]),morgan_radius,nBits=bitSize_circular)) 
        except:
