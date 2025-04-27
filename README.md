@@ -2,44 +2,78 @@
 
 The model is a derivation of the natural product fingerprint (eos6tg8). In addition to generating specific natural product fingerprints, the activation value of the neuron that predicts if a molecule is a natural product or not can be used as a NP-likeness score. The method outperforms the NP\_Score implemented in RDKit.
 
-## Identifiers
+This model was incorporated on 2021-10-19.
 
-* EOS model ID: `eos9yui`
-* Slug: `natural-product-likeness`
+## Information
+### Identifiers
+- **Ersilia Identifier:** `eos9yui`
+- **Slug:** `natural-product-likeness`
 
-## Characteristics
+### Domain
+- **Task:** `Annotation`
+- **Subtask:** `Property calculation or prediction`
+- **Biomedical Area:** `Any`
+- **Target Organism:** `Not Applicable`
+- **Tags:** `Natural product`, `Drug-likeness`
 
-* Input: `Compound`
-* Input Shape: `Single`
-* Task: `Regression`
-* Output: `Score`
-* Output Type: `Float`
-* Output Shape: `Single`
-* Interpretation: Higher score indicates higher natural product likeness
+### Input
+- **Input:** `Compound`
+- **Input Dimension:** `1`
 
-## References
+### Output
+- **Output Dimension:** `1`
+- **Output Consistency:** `Fixed`
+- **Interpretation:** Higher score indicates higher natural product likeness
 
-* [Publication](https://www.sciencedirect.com/science/article/pii/S2001037021003226?)
-* [Source Code](https://github.com/kochgroup/neural_npfp)
-* Ersilia contributor: [miquelduranfrigola](https://github.com/miquelduranfrigola)
+Below are the **Output Columns** of the model:
+| Name | Type | Direction | Description |
+|------|------|-----------|-------------|
+| np_score | float | high | Natural product likeness score |
 
-## Ersilia model URLs
-* [GitHub](https://github.com/ersilia-os/eos9yui)
-* [AWS S3](https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos9yui.zip)
-* [DockerHub](https://hub.docker.com/r/ersiliaos/eos9yui) (AMD64, ARM64)
 
-## Citation
+### Source and Deployment
+- **Source:** `Local`
+- **Source Type:** `External`
+- **DockerHub**: [https://hub.docker.com/r/ersiliaos/eos9yui](https://hub.docker.com/r/ersiliaos/eos9yui)
+- **Docker Architecture:** `AMD64`, `ARM64`
+- **S3 Storage**: [https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos9yui.zip](https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos9yui.zip)
 
-If you use this model, please cite the [original authors](https://www.sciencedirect.com/science/article/pii/S2001037021003226?) of the model and the [Ersilia Model Hub](https://github.com/ersilia-os/ersilia/blob/master/CITATION.cff).
+### Resource Consumption
 
-## License
 
-This package is licensed under a GPL-3.0 license. The model contained within this package is licensed under a None license.
+### References
+- **Source Code**: [https://github.com/kochgroup/neural_npfp](https://github.com/kochgroup/neural_npfp)
+- **Publication**: [https://www.sciencedirect.com/science/article/pii/S2001037021003226?](https://www.sciencedirect.com/science/article/pii/S2001037021003226?)
+- **Publication Type:** `Peer reviewed`
+- **Publication Year:** `2021`
+- **Ersilia Contributor:** [miquelduranfrigola](https://github.com/miquelduranfrigola)
 
-Notice: Ersilia grants access to these models 'as is' provided by the original authors, please refer to the original code repository and/or publication if you use the model in your research.
+### License
+This package is licensed under a [GPL-3.0](https://github.com/ersilia-os/ersilia/blob/master/LICENSE) license. The model contained within this package is licensed under a [None](LICENSE) license.
 
-## About Us
+**Notice**: Ersilia grants access to models _as is_, directly from the original authors, please refer to the original code repository and/or publication if you use the model in your research.
 
-The [Ersilia Open Source Initiative](https://ersilia.io) is a Non Profit Organization ([1192266](https://register-of-charities.charitycommission.gov.uk/charity-search/-/charity-details/5170657/full-print)) with the mission is to equip labs, universities and clinics in LMIC with AI/ML tools for infectious disease research.
 
-[Help us](https://www.ersilia.io/donate) achieve our mission!
+## Use
+To use this model locally, you need to have the [Ersilia CLI](https://github.com/ersilia-os/ersilia) installed.
+The model can be **fetched** using the following command:
+```bash
+# fetch model from the Ersilia Model Hub
+ersilia fetch eos9yui
+```
+Then, you can **serve**, **run** and **close** the model as follows:
+```bash
+# serve the model
+ersilia serve eos9yui
+# generate an example file
+ersilia example -n 3 -f my_input.csv
+# run the model
+ersilia run -i my_input.csv -o my_output.csv
+# close the model
+ersilia close
+```
+
+## About Ersilia
+The [Ersilia Open Source Initiative](https://ersilia.io) is a tech non-profit organization fueling sustainable research in the Global South.
+Please [cite](https://github.com/ersilia-os/ersilia/blob/master/CITATION.cff) the Ersilia Model Hub if you've found this model to be useful. Always [let us know](https://github.com/ersilia-os/ersilia/issues) if you experience any issues while trying to run it.
+If you want to contribute to our mission, consider [donating](https://www.ersilia.io/donate) to Ersilia!
