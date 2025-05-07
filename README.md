@@ -43,10 +43,6 @@ Below are the **Output Columns** of the model:
 - **Environment Size (Mb):** `1528`
 - **Image Size (Mb):** `1599.06`
 
-**Computational Performance (seconds):**
-- 4 inputs: `35.6`
-- 20 inputs: `25.32`
-- 100 inputs: `25.74`
 
 ### References
 - **Source Code**: [https://github.com/kochgroup/neural_npfp](https://github.com/kochgroup/neural_npfp)
