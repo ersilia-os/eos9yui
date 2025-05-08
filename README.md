@@ -41,8 +41,12 @@ Below are the **Output Columns** of the model:
 ### Resource Consumption
 - **Model Size (Mb):** `63`
 - **Environment Size (Mb):** `1529`
-- **Image Size (Mb):** `1599.06`
+- **Image Size (Mb):** `1599.37`
 
+**Computational Performance (seconds):**
+- 10 inputs: `35.38`
+- 100 inputs: `25.65`
+- 10000 inputs: `532.36`
 
 ### References
 - **Source Code**: [https://github.com/kochgroup/neural_npfp](https://github.com/kochgroup/neural_npfp)
