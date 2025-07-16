@@ -5,7 +5,6 @@
     "Title": "Natural product likeness score",
     "Description": "The model is a derivation of the natural product fingerprint (eos6tg8). In addition to generating specific natural product fingerprints, the activation value of the neuron that predicts if a molecule is a natural product or not can be used as a NP-likeness score. The method outperforms the NP\\_Score implemented in RDKit.",
     "Deployment": [
-        "Online",
         "Local"
     ],
     "Source": "Local",
