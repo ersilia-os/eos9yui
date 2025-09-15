@@ -2,8 +2,7 @@
 
 The model is a derivation of the natural product fingerprint (eos6tg8). In addition to generating specific natural product fingerprints, the activation value of the neuron that predicts if a molecule is a natural product or not can be used as a NP-likeness score. The method outperforms the NP\_Score implemented in RDKit.
 
-This model was incorporated on 2021-10-22.
-
+This model was incorporated on 2021-10-22.Last packaged on 2025-09-15.
 
 ## Information
 ### Identifiers
@@ -36,18 +35,18 @@ Below are the **Output Columns** of the model:
 - **Source:** `Local`
 - **Source Type:** `External`
 - **DockerHub**: [https://hub.docker.com/r/ersiliaos/eos9yui](https://hub.docker.com/r/ersiliaos/eos9yui)
-- **Docker Architecture:** `AMD64`, `ARM64`
+- **Docker Architecture:** `AMD64`
 - **S3 Storage**: [https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos9yui.zip](https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos9yui.zip)
 
 ### Resource Consumption
 - **Model Size (Mb):** `63`
 - **Environment Size (Mb):** `1548`
-- **Image Size (Mb):** `1605.85`
+- **Image Size (Mb):** `1622.5`
 
 **Computational Performance (seconds):**
-- 10 inputs: `28.02`
-- 100 inputs: `17.85`
-- 10000 inputs: `135.1`
+- 10 inputs: `29.03`
+- 100 inputs: `19.16`
+- 10000 inputs: `145.26`
 
 ### References
 - **Source Code**: [https://github.com/kochgroup/neural_npfp](https://github.com/kochgroup/neural_npfp)
