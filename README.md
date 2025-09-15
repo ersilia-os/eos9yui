@@ -4,6 +4,7 @@ The model is a derivation of the natural product fingerprint (eos6tg8). In addit
 
 This model was incorporated on 2021-10-22.
 
+
 ## Information
 ### Identifiers
 - **Ersilia Identifier:** `eos9yui`
@@ -13,7 +14,7 @@ This model was incorporated on 2021-10-22.
 - **Task:** `Annotation`
 - **Subtask:** `Property calculation or prediction`
 - **Biomedical Area:** `Any`
-- **Target Organism:** `Not Applicable`
+- **Target Organism:** `Any`
 - **Tags:** `Natural product`, `Drug-likeness`
 
 ### Input
