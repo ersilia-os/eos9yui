@@ -3,7 +3,7 @@
     "Slug": "natural-product-likeness",
     "Status": "Ready",
     "Title": "Natural product likeness score",
-    "Description": "The model is a derivation of the natural product fingerprint (eos6tg8). In addition to generating specific natural product fingerprints, the activation value of the neuron that predicts if a molecule is a natural product or not can be used as a NP-likeness score. The method outperforms the NP\\_Score implemented in RDKit.",
+    "Description": "Scores how strongly a molecule resembles a natural product, using the activation of the output neuron in a network trained to distinguish natural from synthetic chemistry. Menke and co-workers reported that this learned score outperforms the NP-likeness score implemented in RDKit, which relies on fragment frequency statistics rather than a trained model. Higher values indicate closer resemblance to natural product chemical space, a property associated with structural complexity and biological relevance.",
     "Deployment": [
         "Local"
     ],
@@ -20,7 +20,7 @@
     ],
     "Output Dimension": 1,
     "Output Consistency": "Fixed",
-    "Interpretation": "Higher score indicates higher natural product likeness",
+    "Interpretation": "Natural product likeness score where higher values indicate closer resemblance to natural products.",
     "Tag": [
         "Natural product",
         "Drug-likeness"
