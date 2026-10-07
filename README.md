@@ -1,6 +1,6 @@
 # Natural product likeness score
 
-Scores how strongly a molecule resembles a natural product, using the activation of the output neuron in a network trained to distinguish natural from synthetic chemistry. Menke and co-workers reported that this learned score outperforms the NP-likeness score implemented in RDKit, which relies on fragment frequency statistics rather than a trained model. Higher values indicate closer resemblance to natural product chemical space, a property associated with structural complexity and biological relevance.
+Rates how likely a molecule is to be a natural product, reading the classifier output of the network Menke and colleagues trained on 394,939 COCONUT natural products against 210,412 ZINC decoys. The method outperforms the NP_Score implemented in RDKit. Values are unbounded log-odds rather than probabilities, since the sigmoid is applied only during training, and they spread less across natural products than Ertl's score, which limits discrimination at the high end.
 
 This model was incorporated on 2021-10-22.Last packaged on 2025-09-15.
 
@@ -23,7 +23,7 @@ This model was incorporated on 2021-10-22.Last packaged on 2025-09-15.
 ### Output
 - **Output Dimension:** `1`
 - **Output Consistency:** `Fixed`
-- **Interpretation:** Natural product likeness score where higher values indicate closer resemblance to natural products.
+- **Interpretation:** Natural product likeness as an unbounded log-odds score, higher values indicating a probable natural product.
 
 Below are the **Output Columns** of the model:
 | Name | Type | Direction | Description |
