@@ -21,7 +21,7 @@ with open(input_file, "r") as f:
 
 data = pd.DataFrame({"smiles":smiles_list})
 
-model_paths = os.path.dirname(os.path.join(root,"data/trained_models/npl_nonorm_64/"))
+model_paths = os.path.abspath(os.path.join(root, "..", "..", "checkpoints"))
 settings = yaml.safe_load(open(os.path.join(model_paths,"settings.yml"), "r"))
 ecfp4,index_error=get_fingerprints_user(data, label=0)
 
