@@ -3,7 +3,7 @@
 Rates how likely a molecule is to be a natural product, reading the classifier output of the network Menke and colleagues trained on 394,939 COCONUT natural products against 210,412 ZINC decoys. The method outperforms the NP\_Score implemented in RDKit. Values are unbounded log-odds rather than probabilities, since the sigmoid is applied only during training, and they spread less across natural products than Ertls score, which limits discrimination at the high end.
 
 This model was incorporated on 2021-10-22.
-Last packaged on 2025-09-15.
+Last packaged on 2026-11-12.
 
 ## Information
 ### Identifiers
@@ -36,18 +36,18 @@ Below are the **Output Columns** of the model:
 - **Source:** `Local`
 - **Source Type:** `External`
 - **DockerHub**: [https://hub.docker.com/r/ersiliaos/eos9yui](https://hub.docker.com/r/ersiliaos/eos9yui)
-- **Docker Architecture:** `AMD64`
+- **Docker Architecture:** `AMD64`, `ARM64`
 - **S3 Storage**: [https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos9yui.zip](https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos9yui.zip)
 
 ### Resource Consumption
 - **Model Size (Mb):** `25`
 - **Environment Size (Mb):** `1540`
-- **Image Size (Mb):** `1622.5`
+- **Image Size (Mb):** `434.92`
 
 **Computational Performance (seconds):**
-- 10 inputs: `29.03`
-- 100 inputs: `19.16`
-- 10000 inputs: `145.26`
+- 10 inputs: `30.04`
+- 100 inputs: `18.78`
+- 10000 inputs: `121.14`
 
 ### References
 - **Source Code**: [https://github.com/kochgroup/neural_npfp](https://github.com/kochgroup/neural_npfp)
