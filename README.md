@@ -1,8 +1,9 @@
 # Natural product likeness score
 
-Rates how likely a molecule is to be a natural product, reading the classifier output of the network Menke and colleagues trained on 394,939 COCONUT natural products against 210,412 ZINC decoys. The method outperforms the NP_Score implemented in RDKit. Values are unbounded log-odds rather than probabilities, since the sigmoid is applied only during training, and they spread less across natural products than Ertl's score, which limits discrimination at the high end.
+Rates how likely a molecule is to be a natural product, reading the classifier output of the network Menke and colleagues trained on 394,939 COCONUT natural products against 210,412 ZINC decoys. The method outperforms the NP\_Score implemented in RDKit. Values are unbounded log-odds rather than probabilities, since the sigmoid is applied only during training, and they spread less across natural products than Ertls score, which limits discrimination at the high end.
 
-This model was incorporated on 2021-10-22.Last packaged on 2025-09-15.
+This model was incorporated on 2021-10-22.
+Last packaged on 2025-09-15.
 
 ## Information
 ### Identifiers
